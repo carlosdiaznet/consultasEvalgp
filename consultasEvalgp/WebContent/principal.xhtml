@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+
+		<ui:composition template="template/template.xhtml">
+			<ui:define name="content">
+				<h:form>
+					<h:dataTable id="data" value="#{consultaBeans.registros}"
+						var="datos">
+						<h:column>
+							<f:facet name="header">Carnet</f:facet>
+							<h:outputText value="#{datos.carnet}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Genero</f:facet>
+							<h:outputText value="#{datos.genero}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Fecha</f:facet>
+							<h:outputText value="#{datos.fecha}" />
+						</h:column>
+					</h:dataTable>
+				</h:form>
+			</ui:define>
+		</ui:composition>
+</h:body>
+
+</html>
