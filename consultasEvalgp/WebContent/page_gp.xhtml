@@ -5,68 +5,20 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
-	
 	<ui:composition template="/template/template.xhtml">
 		<ui:define name="content">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1>Grafica de pastel</h1>
+				<h1>Medición interna</h1>
 			</div>
 		</div>
 		<div class="row">
-		
 		<h:form styleClass="panel panel-default">
-			<div class="panel-heading"> Mediciones por año </div>
+			<div class="panel-heading"> Basic Form Elements </div>
 			<div class="panel-body">
-			<script type="text/javascript" src="#{resource['code/highcharts.js']}"></script>
 			
-			<div id="container" style="min-width: 310px; height: 400px; max-width: 500px; margin: 0 auto"></div>
-			<script type="text/javascript">
-		Highcharts.chart('container', {
-		    chart: {
-		        plotBackgroundColor: null,
-		        plotBorderWidth: null,
-		        plotShadow: false,
-		        type: 'pie'
-		    },
-		    title: {
-		        text: null
-		    },
-		    tooltip: {
-		        pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
-		    },
-		    plotOptions: {
-		        pie: {
-		            allowPointSelect: true,
-		            cursor: 'pointer',
-		            dataLabels: {
-		                enabled: true,
-		                format: '{point.name}: {point.percentage:.1f} %',
-		                style: {
-		                    color: 'grey',
-		                    fontSize: '16px',
-		                    fontWeight: 'normal'
-		                }
-		            }
-		        }
-		    },
-		    series: [{
-		        name: 'Mediciones por año',
-		        colorByPoint: true,
-		        data: [{
-		            name: '2017',
-		            y: 555
-		        }, {
-		            name: '2016',
-		            y: 17
-		        }, {
-		            name: '2015',
-		            y: 1643
-		        },]
-		    }]
-		});
-		</script>
-			
+			<p:commandButton value="Enviar" icon="fa fa-fw fa-pie-chart" type="buttom" />
+			<h:commandButton styleClass="btn btn-primary" value="Registrar" />
 			</div>
 		</h:form>
 		</div>

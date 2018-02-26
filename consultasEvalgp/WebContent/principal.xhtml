@@ -8,10 +8,8 @@
 <h:body>
 
 		<ui:composition template="template/template.xhtml">
-		
 			<ui:define name="content">
 				<h:form>
-				<f:event listener="#{consultaBeans.listar()}" type="preRenderView" />
 					<h:dataTable id="data" value="#{consultaBeans.registros}"
 						var="datos">
 						<h:column>
@@ -25,10 +23,6 @@
 						<h:column>
 							<f:facet name="header">Fecha</f:facet>
 							<h:outputText value="#{datos.fecha}" />
-						</h:column>
-						<h:column>
-							<f:facet name="header">Año</f:facet>
-							<h:outputText value="#{datos.anio}"/>
 						</h:column>
 					</h:dataTable>
 				</h:form>

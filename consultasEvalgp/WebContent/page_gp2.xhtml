@@ -5,31 +5,22 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
-	
 	<ui:composition template="/template/template.xhtml">
 		<ui:define name="content">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1>Unidades Administrativas</h1>
+				<h1>Medición interna</h1>
 			</div>
 		</div>
 		<div class="row">
-		<div class="col-lg-12">
 		<h:form styleClass="panel panel-default">
-		<f:event listener="#{unidadesBeans.listar()}" type="preRenderView" />
-			<div class="panel-heading">Listado de Unidades Administrativas</div>
+			<div class="panel-heading"> Basic Form Elements </div>
 			<div class="panel-body">
-				<div class="table-responsive">
-					<h:dataTable id="data" value="#{unidadesBeans.unidades}" var="uni" class="table table-striped">
-						<h:column>
-							<f:facet name="header">Unidad</f:facet>
-							<h:outputText value="#{uni.nombreUnidad}" />
-						</h:column>
-					</h:dataTable>
-				</div>
+			
+			<p:commandButton value="Enviar" icon="fa fa-fw fa-pie-chart" type="buttom" />
+			<h:commandButton styleClass="btn btn-primary" value="Registrar" />
 			</div>
 		</h:form>
-		</div>
 		</div>
 		</ui:define>
 	</ui:composition>
