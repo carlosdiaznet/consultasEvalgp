@@ -26,7 +26,7 @@
 
 </h:head>
 <h:body>
-	<f:event listener="#{consultaBeans.listar()}" type="preRenderView" />
+	
 	<div class="wrapper">
 		<ui:insert name="head">
 			<nav class="navbar navbar-default navbar-static-top"
@@ -55,7 +55,7 @@
 							<li><a href="#"><i class="fa fa-users"></i> MEDICIÓN
 									EXTERNA</a>
 								<ul class="nav nav-second-level">
-									<li><a href="morris.html">Enlace 1</a></li>
+									<li><p:link outcome="page_gp3.xhtml">Grafico Barras</p:link></li>
 									<li><a href="#">Tercer nivel</a>
 										<ul class="nav nav-third-level">
 											<li><a href="#">Third Level Item</a></li>

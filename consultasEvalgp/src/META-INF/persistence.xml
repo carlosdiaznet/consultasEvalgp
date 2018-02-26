@@ -3,6 +3,7 @@
 	<persistence-unit name="consultasEvalgp" transaction-type="RESOURCE_LOCAL">
 		<non-jta-data-source>jdbc/eval_planificacion</non-jta-data-source>
 		<class>sv.gob.cnr.gp.entities.EvalInterna</class>
+		<class>sv.gob.cnr.gp.entities.EvlUnidades</class>
 		
 		
 	</persistence-unit>
