@@ -28,4 +28,21 @@ public class UnidadesController extends SystemController {
 		}
 		return lst;
 	}
+	
+	public List<EvlUnidades> listarDatos2() throws Exception {
+		List<EvlUnidades> lst = new ArrayList<EvlUnidades>();
+		try{
+			em.getTransaction().begin();
+			String consulta = "SELECT a.Id, a.nombreUnidad FROM EvlUnidades a;";
+			TypedQuery<EvlUnidades> listarDatos = em.createQuery(consulta, EvlUnidades.class);
+			for(EvlUnidades a: listarDatos.getResultList()){
+				lst.add(a);
+			}
+			em.getTransaction().commit();
+			em.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return lst;
+	}
 }

@@ -17,7 +17,10 @@
 		<div class="col-lg-12">
 		<h:form styleClass="panel panel-default">
 		<f:event listener="#{unidadesBeans.listar()}" type="preRenderView" />
-			<div class="panel-heading">Listado de Unidades Administrativas</div>
+			<div class="panel-heading">
+				Listado de Unidades Administrativas
+				<h:commandButton actionListener="#{unidadesAdministrativasRpt.generatePDF}" class="btn btn-primary" value="Generar Reporte" />
+			</div>
 			<div class="panel-body">
 				<div class="table-responsive">
 					<h:dataTable id="data" value="#{unidadesBeans.unidades}" var="uni" class="table table-striped">
